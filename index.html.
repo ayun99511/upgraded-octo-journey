@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeWise - Pengelolaan Waktu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">⏰ TimeWise</div>
+    <div class="nav-text">Smart Time Management</div>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <div>
+        <p class="small-text">WELCOME TO TIMEWISE</p>
+        <h1>Atur Waktumu,<br><span>Raih Impianmu!</span></h1>
+        <p>Mulai hari yang produktif dengan mengatur kegiatanmu.</p>
+      </div>
+      <div class="clock-card">
+        <div id="clock">00:00:00</div>
+        <p id="date"></p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <p>Total Kegiatan</p>
+        <h2 id="totalTasks">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <p>Selesai</p>
+        <h2 id="completedTasks">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">⏳</div>
+        <p>Belum Selesai</p>
+        <h2 id="pendingTasks">0</h2>
+      </div>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-heading">
+        <h3>Progress Kegiatan</h3>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+      <p>Terus semangat menyelesaikan kegiatanmu!</p>
+    </section>
+
+    <section class="task-section">
+      <div class="section-heading">
+        <div>
+          <h2>Daftar Kegiatan</h2>
+          <p>Atur dan selesaikan kegiatanmu hari ini.</p>
+        </div>
+      </div>
+
+      <form id="taskForm" class="task-form">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Apa kegiatan yang ingin kamu lakukan?"
+          required
+        >
+
+        <input type="date" id="taskDate" required>
+        <input type="time" id="taskTime" required>
+
+        <select id="taskPriority">
+          <option value="Rendah">Prioritas Rendah</option>
+          <option value="Sedang" selected>Prioritas Sedang</option>
+          <option value="Tinggi">Prioritas Tinggi</option>
+        </select>
+
+        <button type="submit">+ Tambah Kegiatan</button>
+      </form>
+
+      <div class="filter">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="pending">Belum Selesai</button>
+        <button class="filter-btn" data-filter="completed">Selesai</button>
+      </div>
+
+      <div id="taskList" class="task-list">
+        <p class="empty">Belum ada kegiatan. Yuk, tambahkan kegiatanmu!</p>
+      </div>
+    </section>
+
+    <section class="motivation">
+      <div class="motivation-icon">🌟</div>
+      <div>
+        <h3>Motivasi Hari Ini</h3>
+        <p>"Waktu adalah kesempatan. Gunakan dengan sebaik-baiknya."</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 TimeWise | Manage Your Time, Achieve Your Dreams.</p>
+    <p>Created with ❤️ for a productive life.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
